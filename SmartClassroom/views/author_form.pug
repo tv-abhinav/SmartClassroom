@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='/submit' enctype="application/json")
+    div.form-group
+      label(for='name') Name:
+      input#name.form-control(type='text', placeholder='Full name (Christian)' name='name' required='true' value=(undefined===author ? '' : author.name) )
+      label(for='reg_no') Register No:
+      input#reg_no.form-control(type='text', placeholder='Register No. (RA15110050XXX)' name='reg_no' required='true' value=(undefined===author ? '' : author.reg_no))
+      label(for='UID') UID:
+      input#UID.form-control(type='text', placeholder='Register No. (RA15110050XXX)' name='UID' required='true' value=(undefined===author ? '' : author.UID))
+      a(href='http://raspberrypi:3050/reqid' target='_blank') Please flash the card and click here to View the UID
+    div.form-group
+    button.btn.btn-primary(type='submit') Submit
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

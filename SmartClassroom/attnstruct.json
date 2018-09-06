@@ -1,0 +1,5 @@
+Attendance
+{ "Reg_no" : "RA1511005010111", "DandT" : { "Day" : 15, "Month" : 9, "Year" : 2017, "Hours" : 22, "Minutes" : 40 }, "_id" : ObjectId("59e38cbda93f500dbf6d7869") }
+
+Studentinfo
+{ "name" : "T.V.ABHINAV", "reg_no" : "RA1511005010111", "UID" : "E476A2D5", "_id" : ObjectId("59e38c7d1bbdf20d5bb7e2c5") }

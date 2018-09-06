@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='/dispattn' enctype="application/json")
+    div.form-group
+    input-group.date
+        #date.input-daterange.input-group
+            span.input-group-addon Day:
+            input#Date.input-sm.form-control(type='text', name='date', placeholder='dd')
+            span.input-group-addon Month:
+            input#Month.input-sm.form-control(type='text', name='month', placeholder='mm')
+            span.input-group-addon Year:
+            input#Year.input-sm.form-control(type='text', name='year', placeholder='yyyy')
+            span.input-group-btn
+                button.btn.btn-default.btn-sm(type='button', style='margin-left:8px;')
+                     Search
+    div.form-group
+    button.btn.btn-primary(type='submit') Search
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
